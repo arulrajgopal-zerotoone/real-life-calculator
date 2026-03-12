@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compound Interest Calculator</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="principal">Principal Amount:</label>
+                <input type="number" id="principal" placeholder="Enter principal amount" disabled>
+            </div>
+            <div class="input-group">
+                <label for="interest-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="interest-rate" placeholder="Enter interest rate" disabled>
+            </div>
+            <div class="input-group">
+                <label for="years">Number of Years:</label>
+                <input type="number" id="years" placeholder="Enter number of years" disabled>
+            </div>
+            <div class="input-group">
+                <label for="final-amount">Final Amount:</label>
+                <input type="number" id="final-amount" placeholder="Enter final amount" disabled>
+            </div>
+            <div class="input-group">
+                <label>Calculate:</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-final-amount" value="final-amount" onclick="selectCalculation('final-amount')" checked>
+                        <label for="calculate-final-amount">Final Amount</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-principal" value="principal" onclick="selectCalculation('principal')">
+                        <label for="calculate-principal">Principal</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-interest-rate" value="interest-rate" onclick="selectCalculation('interest-rate')">
+                        <label for="calculate-interest-rate">Interest Rate</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-years" value="years" onclick="selectCalculation('years')">
+                        <label for="calculate-years">Years</label>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button onclick="calculate()">Calculate</button>
+            </div>
+        </div>
+        <h2 id="result"></h2>
+        <div class="back-to-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="compound.js"></script>
+</body>
+</html>

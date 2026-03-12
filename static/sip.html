@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SIP Calculator</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="monthly-investment">Monthly Investment:</label>
+                <input type="number" id="monthly-investment" placeholder="Enter monthly investment" disabled>
+            </div>
+            <div class="input-group">
+                <label for="expected-return">Expected Annual Return Rate (%):</label>
+                <input type="number" id="expected-return" placeholder="Enter expected return" disabled>
+            </div>
+            <div class="input-group">
+                <label for="investment-duration">Investment Duration (Years):</label>
+                <input type="number" id="investment-duration" placeholder="Enter duration in years" disabled>
+            </div>
+            <div class="input-group">
+                <label for="future-value">Future Value:</label>
+                <input type="number" id="future-value" placeholder="Calculated future value" disabled>
+            </div>
+            <div class="input-group">
+                <label>Calculate:</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-future-value" value="future-value" onclick="selectCalculation('future-value')" checked>
+                        <label for="calculate-future-value">Future Value</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-monthly-investment" value="monthly-investment" onclick="selectCalculation('monthly-investment')">
+                        <label for="calculate-monthly-investment">Monthly Investment</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-return-rate" value="expected-return" onclick="selectCalculation('expected-return')">
+                        <label for="calculate-return-rate">Expected Return Rate</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-duration" value="investment-duration" onclick="selectCalculation('investment-duration')">
+                        <label for="calculate-duration">Duration</label>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button onclick="calculateSIP()">Calculate</button>
+            </div>
+        </div>
+        <h2 id="result"></h2>
+        <div class="back-to-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="sip.js"></script>
+</body>
+</html>

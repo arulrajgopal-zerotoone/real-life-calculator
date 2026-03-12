@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EMI Calculator</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="principal">Loan Amount (Principal):</label>
+                <input type="number" id="principal" placeholder="Enter principal amount" disabled>
+            </div>
+            <div class="input-group">
+                <label for="interest-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="interest-rate" placeholder="Enter interest rate" disabled>
+            </div>
+            <div class="input-group">
+                <label for="tenure">Loan Tenure (Years):</label>
+                <input type="number" id="tenure" placeholder="Enter number of years" disabled>
+            </div>
+            <div class="input-group">
+                <label for="emi">EMI:</label>
+                <input type="number" id="emi" placeholder="Calculated EMI" disabled>
+            </div>
+            <div class="input-group">
+                <label>Calculate:</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-emi" value="emi" onclick="selectCalculation('emi')" checked>
+                        <label for="calculate-emi">EMI</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-principal" value="principal" onclick="selectCalculation('principal')">
+                        <label for="calculate-principal">Principal</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-interest-rate" value="interest-rate" onclick="selectCalculation('interest-rate')">
+                        <label for="calculate-interest-rate">Interest Rate</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="calculate" id="calculate-tenure" value="tenure" onclick="selectCalculation('tenure')">
+                        <label for="calculate-tenure">Tenure</label>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button onclick="calculateEMI()">Calculate</button>
+            </div>
+        </div>
+        <h2 id="result"></h2>
+        <div class="back-to-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="emi.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "real-life-calculator",
+    "version": "1.0.0",
+    "description": "A static web application deployed to Azure Web App",
+    "scripts": {
+      "build": "echo 'Building the app...'",       
+      "test": "echo 'Running tests...'"            
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ArulrajGopal/real-life-calculator.git"
+    },
+    "keywords": ["html", "css", "javascript", "azure", "webapp"],
+    "author": "ArulrajGopal",
+    "license": "MIT"
+  }
+  
